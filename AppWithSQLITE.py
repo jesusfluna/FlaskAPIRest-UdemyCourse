@@ -54,7 +54,7 @@ def post_orders():
 
 
 @app.route('/orders/<order_id>', methods=["DELETE"])
-def post_orders(order_id):
+def delete_orders(order_id):
     entry = Myapp.query.get_or_404(order_id)
 
     db.session.delete(entry)
